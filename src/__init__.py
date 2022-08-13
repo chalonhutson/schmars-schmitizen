@@ -8,5 +8,7 @@ app.secret_key = "secret"
 @app.route("/")
 def home():
     form = Login()
-
+    username = form.username.data
+    password = form.password.data
+    remember_me = form.remember_me.data
     return render_template("login.html", title = "Login", form = form)
