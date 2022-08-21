@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from src.form import Login
+from src.model import User, Ship, UserShip
 
 app = Flask(__name__)
 
