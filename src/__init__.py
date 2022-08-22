@@ -14,6 +14,9 @@ def home():
         username = form.username.data
         password = form.password.data
         remember_me = form.remember_me.data
+        user = User.query.filter_by(username=username).first()
+        if user:
+            print("success")
         print(username)
         print(password)
         print(remember_me)
